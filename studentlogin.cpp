@@ -11,9 +11,9 @@ StudentLogin::StudentLogin(QWidget *parent) :
 }
 
 void StudentLogin::on_login_button_clicked(){ //will have to add code to check the credentials against the database.
-    Qstring username = ui->lineEdit_username->text();
-    Qstring password = ui->lineEdit_password->text();
-    Qstring id = ui->lineEdit_id->text();
+    QString username = ui->lineEdit_username->text();
+    QString password = ui->lineEdit_password->text();
+    QString id = ui->lineEdit_id->text();
     // Check admin credentials (logic can be expanded)
     if (username == "admin@example.com" && password == "password123") {
         ui->status->setText("Login Successful!");
