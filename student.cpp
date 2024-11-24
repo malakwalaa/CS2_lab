@@ -2,7 +2,10 @@
 
 
 
-student::student(const string& username, const :string& password): user(username, password) {}
+student::student(const std::string& username, const std::string& password)
+    : user(username, password) {}
+
+
 
 // Register for a course
 void student::add_course(const course& course) {

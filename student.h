@@ -7,6 +7,7 @@
 #include <vector>
 #include<iostream>
 #include <QListWidget>
+#include <string>
 
 using namespace std;
 using std::string;
@@ -18,7 +19,8 @@ private:
     vector<course>registered_courses;
     vector<event>registered_events;
 public:
-    student(const string& username, string& password);
+     student(const std::string& username, const std::string& password);
+
 
     void add_course(const course& course);
     void drop_course(const string& courseid);

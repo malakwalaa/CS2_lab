@@ -4,7 +4,7 @@ event::event(const std::string& eventId, const std::string& title, const std::st
     : eventid(eventId), title(title), speaker(speaker), schedule(schedule) {}
 
 // Getters
-string event::get_event_idEventId() const {
+string event::get_event_id() const {
     return eventid;
 }
 
