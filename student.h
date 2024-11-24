@@ -5,7 +5,10 @@
 #include "course.h"
 #include "event.h"
 #include <vector>
+#include<iostream>
+#include <QListWidget>
 
+using namespace std;
 using std::string;
 using std::vector;
 
@@ -21,14 +24,14 @@ public:
     void drop_course(const string& courseid);
     void add_event(const event& event);
 
-    void view_added_courses()const;
-    void view_added_events()const;
+    void view_added_courses(QListWidget* listWidget)const;
+    void view_added_events(QListWidget* listWidget)const;
 
     string get_username()const;
     string get_password()const;
 
 
-    void display_dashboard()const override;
+    //void display_dashboard()const override;
 
 };
 

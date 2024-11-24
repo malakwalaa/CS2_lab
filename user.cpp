@@ -1,13 +1,11 @@
 #include "user.h"
 
-user::user(const string& name, const string& id, const string& email) : name(name),id(id),email(email){}
+user::user(const string& username, const string& password) :username(username), password(password){}
 
-string user::getname() const{
-    return name;
+string user::get_username() const{
+    return username;
 }
-string user::getid()const{
-    return id;
-}
-string user::getemail()const{
-    return email;
+user::~user() {}
+bool user::verify(const string& inputPassword) const {
+    return password == inputPassword;
 }

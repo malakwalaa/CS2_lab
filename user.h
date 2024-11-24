@@ -4,21 +4,19 @@
 using std::string;
 using std::vector;
 
-class user
-{
+class user {
 protected:
-    string name;
-    string id;
-    string email;
+    string  username;
+    string password;
 
 public:
-    user(const string& username, const string& password );
-    virtual ~user()=default;
+    user(const string& username, const string& password);
+    virtual ~user();
 
-    string getusername()const;
-    bool confirm (const string& inputpassword) const;
+    string get_username() const;
+    bool verify(const string& inputPassword) const;
 
-    virtual void display_dashboard()const =0;
+    //virtual void displayDashboard() const = 0; // Pure virtual for polymorphism
 };
 
 #endif // USER_H
