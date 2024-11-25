@@ -12,3 +12,15 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+
+void MainWindow::on_student_push_button_clicked()
+{
+    if (!studentLogin) { // Create the StudentLogin dialog if not already created
+        studentLogin = new StudentLogin(this);
+    }
+    studentLogin->show();
+    this->hide();
+}
+
