@@ -15,10 +15,9 @@ using std::vector;
 
 class student: public user
 {
-private:
+public:
     vector<course>registered_courses;
     vector<event>registered_events;
-public:
      student(const std::string& username, const std::string& password);
 
 

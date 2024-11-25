@@ -15,7 +15,9 @@ SOURCES += \
     event.cpp \
     main.cpp \
     mainwindow.cpp \
+    newuserregistration.cpp \
     student.cpp \
+    studentdashboard.cpp \
     studentlogin.cpp \
     university.cpp \
     user.cpp
@@ -26,7 +28,9 @@ HEADERS += \
     course.h \
     event.h \
     mainwindow.h \
+    newuserregistration.h \
     student.h \
+    studentdashboard.h \
     studentlogin.h \
     university.h \
     user.h
@@ -34,6 +38,8 @@ HEADERS += \
 FORMS += \
     AdminLogin.ui \
     mainwindow.ui \
+    newuserregistration.ui \
+    studentdashboard.ui \
     studentlogin.ui
 
 # Default rules for deployment.

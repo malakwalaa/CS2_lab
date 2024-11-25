@@ -20,6 +20,8 @@ private slots:
 
     void on_Registerbutton_clicked();
 
+    void on_Login_button_clicked();
+
 private:
     Ui::StudentLogin *ui;
 };
