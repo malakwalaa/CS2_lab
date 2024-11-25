@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QWidget>
+#include <admindashboard.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::AdminLogin *ui;
+    admindashboard *dashboard;
 };
 
 #endif // ADMINLOGIN_H

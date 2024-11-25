@@ -16,8 +16,10 @@ public:
     ~admindashboard();
     
 private slots:
-    void on_pushButton_clicked();
     
+    void on_crsmgmtbutton_clicked();
+
+
 private:
     Ui::admindashboard *ui;
     coursemanagement *courseManagement;

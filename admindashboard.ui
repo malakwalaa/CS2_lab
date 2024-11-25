@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="crsmgmtbutton">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -26,7 +26,7 @@
     <string>Course Management</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="stdmgmtbutton">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -39,7 +39,7 @@
     <string>Student Management</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="evtmgmtbutton">
    <property name="geometry">
     <rect>
      <x>380</x>

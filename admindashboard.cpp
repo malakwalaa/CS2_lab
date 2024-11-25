@@ -18,7 +18,8 @@ admindashboard::~admindashboard()
     }
 }
 
-void admindashboard::on_pushButton_clicked()
+
+void admindashboard::on_crsmgmtbutton_clicked()
 {
     if (!courseManagement) {
         courseManagement = new coursemanagement(this); // Create it with this as parent
