@@ -108,4 +108,21 @@ void university::save_students(const string& filename) const {
 
     file.close();
 }
+// Default constructor
+university::university() {}
+
+// Getter for courses
+map<string, course>& university::get_courses() {
+    return courses;
+}
+
+// Getter for events
+map<string, event>& university::getEvents() {
+    return events;
+}
+
+// Getter for students
+map<string, student>& university::getStudents() {
+    return students;
+}
 

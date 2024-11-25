@@ -59,3 +59,14 @@ void student::view_added_events(QListWidget* listWidget) const {
 //     std::cout << "Registered Events:\n";
 //     viewRegisteredEvents();
 // }
+
+
+// Getter for username
+std::string student::get_username() const {
+    return username;
+}
+
+// Getter for password
+std::string student::get_password() const {
+    return password;
+}
