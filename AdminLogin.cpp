@@ -24,5 +24,7 @@ void AdminLogin::on_backButton_clicked() {
     parentWidget()->show(); // Return to main window
 }
 AdminLogin::~AdminLogin() {
-    delete ui;
+    delete ui;
+
+}
 }
