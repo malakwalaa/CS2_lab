@@ -31,6 +31,7 @@ public:
     string get_username()const;
     string get_password()const;
 
+    student() : user("", ""), registered_courses(), registered_events() {}
 
     //void display_dashboard()const override;
 

@@ -19,6 +19,7 @@ public:
     string get_name()const;
     string get_prof()const;
     string get_schedule()const;
+    course() : course_id(""), name(""), professor(""), schedule("") {}
 
 };
 

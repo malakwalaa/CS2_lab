@@ -1,6 +1,7 @@
 #ifndef USER_H
 #define USER_H
 #include <string>
+#include<Qstring>
 using std::string;
 using std::vector;
 

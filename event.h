@@ -19,6 +19,10 @@ public:
     string get_title()const;
     string get_speaker()const;
     string get_schedule()const;
+
+     event() : eventid(""), title(""), speaker(""), schedule("") {}
 };
+
+
 
 #endif // EVENT_H
