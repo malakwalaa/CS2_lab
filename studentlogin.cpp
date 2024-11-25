@@ -9,8 +9,13 @@ StudentLogin::StudentLogin(QWidget *parent) :
     ui(new Ui::StudentLogin)
 {
     ui->setupUi(this);
-    ui->lineEdit_password->setEchoMode(QLineEdit::Password);
+    //ui->lineEdit_password->setEchoMode(QLineEdit::Password);
 }
+StudentLogin::~StudentLogin()
+{
+    delete ui;
+}
+
 
 void StudentLogin::on_Login_button_clicked(){ //will have to add code to check the credentials against the database.
     QString username = ui->lineEdit_username->text();
@@ -22,13 +27,15 @@ void StudentLogin::on_Login_button_clicked(){ //will have to add code to check t
     } else {
         ui->status->setText("Invalid credentials!");
     }
+
 }
 
 void StudentLogin::on_Registerbutton_clicked() //will have to add code to create a new user on the spot
     {
-        NewUserRegistration *newUserWindow = new NewUserRegistration();
-        this->hide(); // Hide the current window
-        newUserWindow->show();
+    NewUserRegistration *newUserWindow = new NewUserRegistration(this);
+    newUserWindow->show(); // Show the NewUserRegistration window
+    this->hide(); // Optionally hide the StudentLogin window
+
     }
 
 
@@ -38,8 +45,5 @@ void StudentLogin::on_backButton_clicked()
     parentWidget()->show();
 }
 
-StudentLogin::~StudentLogin()
-{
-    delete ui;
-}
+
 
