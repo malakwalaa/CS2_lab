@@ -104,51 +104,94 @@
 //     this->hide(); // Optionally hide the login page
 // }
 
+// //this code runs
+// #include "mainwindow.h"
+// #include "ui_mainwindow.h"
+// #include "studentlogin.h"
+// #include<newuserregistration.h>
+
+// MainWindow::MainWindow(QWidget *parent)
+//     : QMainWindow(parent), ui(new Ui::MainWindow), studentLogin(nullptr)
+// {
+//     ui->setupUi(this);
+
+//     // Connect UI buttons to their respective slots (optional if done in the .ui file)
+// }
+
+// MainWindow::~MainWindow()
+// {
+//     delete ui;
+//     if (studentLogin) {
+//         delete studentLogin;
+//     }
+// }
+
+// void MainWindow::on_student_push_button_clicked()
+// {
+//     // Navigate to the StudentLogin window
+//     if (!studentLogin) {
+//         studentLogin = new StudentLogin(this); // Pass 'this' as the parent
+//     }
+//     studentLogin->show();
+//     this->hide(); // Optionally hide the MainWindow
+// }
+
+// void MainWindow::on_registerButton_clicked()
+// {
+//     // Navigate to NewUserRegistration (if required directly from MainWindow)
+//     NewUserRegistration *registration = new NewUserRegistration(this);
+//     registration->show();
+//     this->hide();
+// }
+
+// void MainWindow::on_admin_push_button_clicked()
+// {
+//     if (!adminlogin) {
+//         adminlogin = new AdminLogin(this); // Pass 'this' as the parent
+//     }
+//     adminlogin->show();
+//     this->hide(); // Optionally hide the MainWindow
+// }
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "studentlogin.h"
-#include<newuserregistration.h>
+#include "newuserregistration.h"
+#include "AdminLogin.h"
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow), studentLogin(nullptr)
-{
+    : QMainWindow(parent), ui(new Ui::MainWindow), studentLogin(nullptr), adminlogin(nullptr) {
     ui->setupUi(this);
-
-    // Connect UI buttons to their respective slots (optional if done in the .ui file)
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     delete ui;
     if (studentLogin) {
         delete studentLogin;
     }
+    if (adminlogin) {
+        delete adminlogin;
+    }
 }
 
-void MainWindow::on_student_push_button_clicked()
-{
-    // Navigate to the StudentLogin window
+void MainWindow::on_student_push_button_clicked() {
     if (!studentLogin) {
         studentLogin = new StudentLogin(this); // Pass 'this' as the parent
     }
     studentLogin->show();
-    this->hide(); // Optionally hide the MainWindow
+    this->hide();
 }
 
-void MainWindow::on_registerButton_clicked()
-{
-    // Navigate to NewUserRegistration (if required directly from MainWindow)
+void MainWindow::on_registerButton_clicked() {
     NewUserRegistration *registration = new NewUserRegistration(this);
     registration->show();
     this->hide();
 }
 
-void MainWindow::on_admin_push_button_clicked()
-{
+void MainWindow::on_admin_push_button_clicked() {
     if (!adminlogin) {
         adminlogin = new AdminLogin(this); // Pass 'this' as the parent
     }
     adminlogin->show();
-    this->hide(); // Optionally hide the MainWindow
+    this->hide();
 }
-
