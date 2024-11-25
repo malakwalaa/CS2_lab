@@ -40,9 +40,10 @@ HEADERS += \
     user.h
 
 FORMS += \
+    ../../../Downloads/coursemanagement.ui \
+    ../UCMS/coursemanagement.ui \
     AdminLogin.ui \
     admindashboard.ui \
-    coursemanagement.ui \
     mainwindow.ui \
     newuserregistration.ui \
     studentdashboard.ui \
