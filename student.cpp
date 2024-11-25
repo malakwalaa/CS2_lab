@@ -70,3 +70,6 @@ std::string student::get_username() const {
 std::string student::get_password() const {
     return password;
 }
+string student::get_email() const {
+    return email; // Assuming the email field exists in the student class
+}

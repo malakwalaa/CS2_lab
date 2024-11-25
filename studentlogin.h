@@ -27,10 +27,14 @@
 // };
 
 // #endif // STUDENTLOGIN_H
+
+
 #ifndef STUDENTLOGIN_H
 #define STUDENTLOGIN_H
 
 #include <QDialog>
+#include "studentdashboard.h"
+
 
 namespace Ui {
 class StudentLogin;
@@ -51,6 +55,7 @@ private slots:
 
 private:
     Ui::StudentLogin *ui;
+    studentdashboard *dashboard;
 };
 
 #endif // STUDENTLOGIN_H

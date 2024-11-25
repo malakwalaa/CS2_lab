@@ -142,3 +142,13 @@ void MainWindow::on_registerButton_clicked()
     registration->show();
     this->hide();
 }
+
+void MainWindow::on_admin_push_button_clicked()
+{
+    if (!adminlogin) {
+        adminlogin = new AdminLogin(this); // Pass 'this' as the parent
+    }
+    adminlogin->show();
+    this->hide(); // Optionally hide the MainWindow
+}
+

@@ -11,7 +11,9 @@ CONFIG += c++17
 SOURCES += \
     AdminLogin.cpp \
     admin.cpp \
+    admindashboard.cpp \
     course.cpp \
+    coursemanagement.cpp \
     event.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -25,7 +27,9 @@ SOURCES += \
 HEADERS += \
     AdminLogin.h \
     admin.h \
+    admindashboard.h \
     course.h \
+    coursemanagement.h \
     event.h \
     mainwindow.h \
     newuserregistration.h \
@@ -37,6 +41,8 @@ HEADERS += \
 
 FORMS += \
     AdminLogin.ui \
+    admindashboard.ui \
+    coursemanagement.ui \
     mainwindow.ui \
     newuserregistration.ui \
     studentdashboard.ui \

@@ -65,6 +65,7 @@
 
 #include <QMainWindow>
 #include "studentlogin.h"
+#include<AdminLogin.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -82,9 +83,14 @@ private slots:
     void on_student_push_button_clicked(); // Slot for navigating to StudentLogin
     void on_registerButton_clicked();      // Slot for navigating to NewUserRegistration
 
+    void on_admin_push_button_clicked();
+
 private:
     Ui::MainWindow *ui;
-    StudentLogin *studentLogin; // Pointer to StudentLogin
+    StudentLogin *studentLogin;
+    // Pointer to StudentLogin
+    AdminLogin *adminlogin;
+
 };
 
 #endif // MAINWINDOW_H

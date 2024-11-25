@@ -87,7 +87,7 @@ void university::load_students(const string& filename) {
         if (std::getline(iss, username, ',') &&
             std::getline(iss, password, ',')) {
 
-            students[username] = student(username, password);
+           students[username] = new student(username, password); // Dynamically allocate the student
         }
     }
 
@@ -102,8 +102,8 @@ void university::save_students(const string& filename) const {
     }
 
     for (auto it = students.begin(); it != students.end(); ++it) {
-        file << it->second.get_username() << "," // Access student object via the second element of the pair
-             << it->second.get_password() << "\n";
+        file << it->second->get_username() << "," // Use '->' for pointer access
+             << it->second->get_password() << "\n";
     }
 
     file.close();
@@ -122,7 +122,13 @@ map<string, event>& university::getEvents() {
 }
 
 // Getter for students
-map<string, student>& university::getStudents() {
-    return students;
+map<string, student*>& university::getStudents() {
+    return students; // Return a reference to the map of pointers
 }
-
+student* university::getStudentById(const std::string& studentId) {
+    auto it = students.find(studentId); // Search for the student by ID
+    if (it != students.end()) {
+        return it->second; // Return the student pointer if found
+    }
+    return nullptr; // Return nullptr if student is not found
+}

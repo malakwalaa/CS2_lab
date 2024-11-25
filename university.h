@@ -15,7 +15,7 @@ using std::map;
 class university
 {
 private:
-    map<string, student> students;
+    map<string, student*> students;
     map<string, event>events;
     map<string,course>courses;
 public:
@@ -30,9 +30,13 @@ public:
     void load_students(const string& filename);
     void save_students(const string& filename) const;
 
+    student* getStudentById(const std::string& studentId);
+    void addStudent(const std::string& id, student* newStudent);
+
+
     map<string, course>& get_courses();
     map<std::string, event>& getEvents();
-    map<std::string, student>& getStudents();
+    map<std::string, student*>& getStudents();
 
 
     // void addstudent(const student& student);

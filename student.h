@@ -30,8 +30,12 @@ public:
 
     string get_username()const;
     string get_password()const;
+    string get_email()const;
 
     student() : user("", ""), registered_courses(), registered_events() {}
+
+private:
+    string email;
 
     //void display_dashboard()const override;
 
