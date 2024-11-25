@@ -9,11 +9,11 @@ AdminLogin::AdminLogin(QWidget *parent) :
     ui->passwordInput->setEchoMode(QLineEdit::Password);
 }
 void AdminLogin::on_loginButton_clicked() {
-    QString email = ui->emailInput->text();
+    QString username = ui->usernameInput->text();
     QString password = ui->passwordInput->text();
 
     // Check admin credentials (logic can be expanded)
-    if (email == "admin@example.com" && password == "password123") {
+    if (username == "admin" && password == "1234") {
         ui->statusLabel->setText("Login Successful!");
         dashboard = new admindashboard(); // Pass current student
         dashboard->show();
